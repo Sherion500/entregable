@@ -1,0 +1,130 @@
+
+.encabezado{
+    background: white;
+    padding: 0.5px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 3px solid black
+}
+
+.menu{
+    display: flex;
+}
+
+.menu_impacto{
+    background: white;
+    padding: 0 100px 0 0 ;
+    font-size: 30px;
+    
+
+}
+
+.menu_marcas{
+    background: white;
+    padding: 0 100px 0 0;
+    font-size: 30px;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu_impacto a{
+    text-decoration: none;
+}
+
+.menu_marcas a{
+    text-decoration: none;
+}
+
+.Formularios {
+    background: snow;
+    padding: 100px 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Formularios_input {
+    padding: 10px 30px;
+    width: 50%;
+    margin: 5px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+
+}
+
+.formulario_date, .formulario_enviar {
+    width: 50%;
+}
+
+.terminos_condiciones, .politica {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.shuter {
+    background-color: white; /* Fondo negro del footer */
+    padding: 15px;
+    position: relative;
+}
+
+.shuter::before {
+    content: '';
+    display: block;
+    height: 5px; /* Ajusta el grosor de la raya azul */
+    background-color:black; /* Color de la raya azul */
+    width: 100%;
+    position: absolute;
+    top: -5px; /* Posiciona la raya justo por encima del footer */
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: flex-start;
+    position: relative;
+    color: black;
+}
+
+.footer-content div {
+    width: auto; /* Ajusta el ancho de cada columna */
+}
+
+.redes {
+    display: flex; /* Alinea los iconos en una fila */
+    justify-content: space-between; /* Distribuye los íconos uniformemente */
+    align-items: center; /* Alinea los iconos verticalmente */
+    gap: 10px; /* Añade espacio entre los iconos */
+}
+
+.redes img {
+    width: 50px; /* Ajusta el tamaño de los iconos si es necesario */
+    height: auto; /* Mantiene las proporciones de los iconos */
+}
+
+.footer-logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer-logo img {
+    display: block;
+    margin-left: auto; 
+}
+
+.box {
+    background: blue;
+    padding: 1px 100px;
+}

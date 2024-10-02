@@ -1,0 +1,184 @@
+header{
+    background: white;
+    width: 100%;
+}
+
+.encabezado{
+    background: white;
+    padding: 0.5px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 3px solid black
+}
+
+.menu{
+    display: flex;
+}
+.menu_impacto{
+    background: white;
+    padding: 0 100px 0 0 ;
+    font-size: 30px;
+    
+}
+
+.menu_marcas{
+    background: white;
+    padding: 0 100px 0 0;
+    font-size: 30px;
+    
+}
+
+.menu_marcas a{
+    text-decoration: none;
+}
+
+.menu_registro{
+    background: white;
+    padding: 0 100px 0 0;
+    font-size: 30px;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu_impacto a{
+    text-decoration: none;
+}
+
+.menu_registro a{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: red;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    background: black;
+    padding: 10px;
+    margin: 20px;
+    width: 300px;
+    border-style: solid;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.producto img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    transition: transform 0.3s; /* Añadido para suavizar la transición */
+}
+
+.producto:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+.text {
+    margin: 20px 2px;
+    background: black;
+    max-width: 100%;
+    color: white;
+    padding: 10px;
+}
+
+.coca {
+    margin: 60px 0 0 0;
+}
+
+.cero {
+    margin: 30px 20px 0 20px;
+}
+
+.light {
+    margin: 50px 20px 0 20px;
+}
+
+.fanta {
+    margin: 40px 20px 0 20px;
+}
+
+
+.shuter {
+    background-color: white; /* Fondo negro del footer */
+    padding: 15px;
+    position: relative;
+}
+
+.shuter::before {
+    content: '';
+    display: block;
+    height: 5px; /* Ajusta el grosor de la raya azul */
+    background-color:black; /* Color de la raya azul */
+    width: 100%;
+    position: absolute;
+    top: -5px; /* Posiciona la raya justo por encima del footer */
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: flex-start;
+    position: relative;
+    color: black;
+}
+
+.footer-content div {
+    width: auto; /* Ajusta el ancho de cada columna */
+}
+
+.redes {
+    display: flex; /* Alinea los iconos en una fila */
+    justify-content: space-between; /* Distribuye los íconos uniformemente */
+    align-items: center; /* Alinea los iconos verticalmente */
+    gap: 10px; /* Añade espacio entre los iconos */
+}
+
+.redes img {
+    width: 50px; /* Ajusta el tamaño de los iconos si es necesario */
+    height: auto; /* Mantiene las proporciones de los iconos */
+}
+
+.footer-logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer-logo img {
+    display: block;
+    margin-left: auto; 
+}
+
+.box {
+    background: blue;
+    padding: 1px 100px;
+}

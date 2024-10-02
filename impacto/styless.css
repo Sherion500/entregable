@@ -1,0 +1,211 @@
+header{
+    background: white;
+    width: 100%;
+}
+
+.encabezado{
+    background: white;
+    padding: 0.5px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 3px solid black
+}
+
+.menu{
+    display: flex;
+}
+.menu_impacto{
+    background: white;
+    padding: 0 100px 0 0 ;
+    font-size: 30px;
+    
+}
+
+.menu_marcas{
+    background: white;
+    padding: 0 100px 0 0;
+    font-size: 30px;
+    
+}
+
+.menu_marcas a{
+    text-decoration: none;
+}
+
+.menu_registro{
+    background: white;
+    padding: 0 100px 0 0;
+    font-size: 30px;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu_impacto a{
+    text-decoration: none;
+}
+
+.menu_registro a{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+body {
+    background: snow;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+/* Ajuste para las secciones */
+.empleo, .sociales, .deporte, .sostenibilidad {
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px; /* Bordes redondeados */
+    width: 35%;
+    position: relative; /* Necesario para el efecto de giro */
+    perspective: 1000px; /* Añadir perspectiva para el giro */
+}
+
+/* Aumenta el margen en la parte inferior para más espacio */
+.container .empleo,
+.container .sociales,
+.container .deporte,
+.container .sostenibilidad {
+    margin-bottom: 400px; /* Aumenta este valor para más espacio entre las imágenes */
+}
+
+.texto-sociales, .texto-deporte, .texto-sostenibilidad, .texto-empleo {
+    background:red;
+    margin: 20px;
+    padding: 20px;
+    color: black; /* Para hacer el texto más legible sobre el fondo azul */
+}
+
+/* Contenedor de las secciones en dos columnas */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Aumenta este valor para más espacio entre columnas */
+    margin-bottom: 80px;
+}
+
+/* Ajuste de las imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las animaciones */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.empleo:hover .flip-card-inner,
+.sociales:hover .flip-card-inner,
+.deporte:hover .flip-card-inner,
+.sostenibilidad:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Efecto de giro al pasar el mouse */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden; /* Ocultar el reverso durante el giro */
+    border-radius: 15px; /* Mantener bordes redondeados */
+}
+
+.flip-card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.flip-card-back {
+    background-color: #ff7b5a;
+    color:black;
+    transform: rotateY(180deg);
+    padding: 20px;
+    line-height: 150%;
+    font-weight: 900;
+}
+
+
+
+
+.shuter {
+    background-color: white; /* Fondo negro del footer */
+    padding: 15px;
+    position: relative;
+}
+
+.shuter::before {
+    content: '';
+    display: block;
+    height: 5px; /* Ajusta el grosor de la raya azul */
+    background-color:black; /* Color de la raya azul */
+    width: 100%;
+    position: absolute;
+    top: -5px; /* Posiciona la raya justo por encima del footer */
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: flex-start;
+    position: relative;
+    color: black;
+}
+
+.footer-content div {
+    width: auto; /* Ajusta el ancho de cada columna */
+}
+
+.redes {
+    display: flex; /* Alinea los iconos en una fila */
+    justify-content: space-between; /* Distribuye los íconos uniformemente */
+    align-items: center; /* Alinea los iconos verticalmente */
+    gap: 10px; /* Añade espacio entre los iconos */
+}
+
+.redes img {
+    width: 50px; /* Ajusta el tamaño de los iconos si es necesario */
+    height: auto; /* Mantiene las proporciones de los iconos */
+}
+
+.footer-logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer-logo img {
+    display: block;
+    margin-left: auto; 
+}
+
+.box {
+    background: blue;
+    padding: 1px 100px;
+}
