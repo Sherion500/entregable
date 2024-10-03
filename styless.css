@@ -9,7 +9,7 @@ header{
     align-items: center;
     justify-content: space-between;
     display: flex;
-    border-bottom: 3px solid black
+    border-bottom: 3px solid black;
 }
 
 .menu{
@@ -18,16 +18,14 @@ header{
 
 .menu_impacto{
     background: white;
-    padding: 0 100px 0 0 ;
+    padding: 0 100px 0 0;
     font-size: 30px;
-    
 }
 
 .menu_marcas{
     background: white;
     padding: 0 100px 0 0;
     font-size: 30px;
-    
 }
 
 .menu_marcas a{
@@ -38,7 +36,6 @@ header{
     background: white;
     padding: 0 100px 0 0;
     font-size: 30px;
-    
 }
 
 .menu a{
@@ -66,16 +63,16 @@ body{
 }
 
 .container {
-    margin: 0 auto; /* Centrar el contenido */
-    padding: 50px 80px; /* Añadir espacio a los costados */
+    margin: 0 auto;
+    padding: 50px 80px;
 }
 
 .historia, .productos, .ubicacion, .video {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px; /* Espacio entre imagen y texto */
-    margin: 10px 0;
+    gap: 10px;
+    margin: 10px 300px;
     background: red;
     border-color: black;
     border-style: solid;
@@ -84,49 +81,43 @@ body{
 }
 
 .historia img, .productos img, .ubicacion img, .video video {
-    width: 600px; /* Ancho de la imagen */
-    height: auto; /* Mantener la proporción */
+    width: 300px;
+    height: auto;
 }
 
-/* Ajustes del texto */
 .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
-    max-width: 600px; /* Ancho máximo del texto */
-    text-align: justify; /* Para alinear el texto */
+    max-width: 600px;
+    text-align: justify;
     padding: 0 0 0 20px;
     margin: 20px 30px 20px 10px;
 }
 
-/* Transición suave en las imágenes */
 .historia img, .productos img, .ubicacion img, .video video {
     transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0.8; /* Hacer que la imagen sea ligeramente transparente por defecto */
+    opacity: 0.8;
 }
 
-/* Efecto al hacer hover: deslizar hacia arriba y opacidad completa */
 .historia img:hover, .productos img:hover, .ubicacion img:hover, .video video:hover {
-    transform: translateY(-10px); /* Desliza hacia arriba */
-    opacity: 1; /* Opacidad completa cuando se pasa el mouse */
+    transform: translateY(-10px);
+    opacity: 1;
 }
 
-/* Animación para el texto (deslizamiento y fade-in) */
 .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
-    opacity: 0; /* Texto oculto por defecto */
-    transform: translateY(20px); /* Texto desplazado hacia abajo por defecto */
+    opacity: 0;
+    transform: translateY(20px);
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Aparece y sube al hacer hover sobre el contenedor */
 .historia:hover .texto-historia,
 .productos:hover .texto-productos,
 .ubicacion:hover .texto-ubicacion,
 .video:hover .texto-video {
-    opacity: 1; /* Mostrar el texto */
-    transform: translateY(0); /* Mover el texto a su posición original */
+    opacity: 1;
+    transform: translateY(0);
 }
 
-
 .shuter {
-    background-color: white; /* Fondo negro del footer */
+    background-color: white;
     padding: 15px;
     position: relative;
 }
@@ -134,11 +125,11 @@ body{
 .shuter::before {
     content: '';
     display: block;
-    height: 5px; /* Ajusta el grosor de la raya azul */
-    background-color:black; /* Color de la raya azul */
+    height: 5px;
+    background-color: black;
     width: 100%;
     position: absolute;
-    top: -5px; /* Posiciona la raya justo por encima del footer */
+    top: -5px;
     left: 0;
 }
 
@@ -152,19 +143,19 @@ body{
 }
 
 .footer-content div {
-    width: auto; /* Ajusta el ancho de cada columna */
+    width: auto;
 }
 
 .redes {
-    display: flex; /* Alinea los iconos en una fila */
-    justify-content: space-between; /* Distribuye los íconos uniformemente */
-    align-items: center; /* Alinea los iconos verticalmente */
-    gap: 10px; /* Añade espacio entre los iconos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 .redes img {
-    width: 50px; /* Ajusta el tamaño de los iconos si es necesario */
-    height: auto; /* Mantiene las proporciones de los iconos */
+    width: 50px;
+    height: auto;
 }
 
 .footer-logo {
@@ -175,7 +166,7 @@ body{
 
 .footer-logo img {
     display: block;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 .box {
@@ -183,10 +174,52 @@ body{
     padding: 1px 100px;
 }
 
-/* Pantallas pequeñas, por ejemplo, móviles (hasta 600px) */
+/* Media query para pantallas pequeñas (hasta 440px) */
 @media screen and (max-width: 440px) {
-    header, body, footer {
-        padding: 25px;
+    /* Ajustar el header y su contenido */
+    header, .encabezado {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu_impacto, .menu_marcas, .menu_registro {
+        padding: 10px 0;
+        font-size: 24px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Ajustar los contenedores de contenido */
+    .historia, .productos, .ubicacion, .video {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    /* Ajustar las imágenes y videos para que ocupen todo el ancho */
+    .historia img, .productos img, .ubicacion img, .video video {
+        width: 100%;
+    }
+
+    .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
+        padding: 10px;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    /* Ajustar el footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes img {
+        width: 40px; /* Ajustar el tamaño de los íconos de redes sociales */
+    }
+
+    .footer-logo img {
+        width: 100px; /* Ajustar el tamaño del logo en el footer */
     }
 }
-
