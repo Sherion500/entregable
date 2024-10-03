@@ -182,3 +182,9 @@ body{
     background: blue;
     padding: 1px 100px;
 }
+
+/* Pantallas pequeñas, por ejemplo, móviles (hasta 600px) */
+@media screen and (max-width: 600px) {
+    header, footer {
+        padding: 15px;
+    }
