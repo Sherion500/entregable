@@ -54,12 +54,13 @@ body{
 }
 
 .historia img, .productos img, .ubicacion img, .video video {
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
     height: auto;
-    /* Limitamos el ancho máximo para que no sobresalga */
 }
 
 .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
+    flex: 1;
     max-width: 600px;
     text-align: justify;
     padding: 0 0 0 20px;
@@ -103,7 +104,6 @@ body{
         max-width: 600px;
     }
 
-    /* Reorganizar el footer en columnas */
     .footer-content {
         flex-direction: column;
     }
@@ -167,4 +167,5 @@ body{
         gap: 10px;
     }
 }
+
 
