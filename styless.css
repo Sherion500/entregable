@@ -5,102 +5,204 @@ body {
     padding: 0;
 }
 
-/* Contenedor principal */
-.container {
-    margin: 0 auto;
-    padding: 50px 10px; /* Espacio adaptado para móviles */
+header {
+    background: white;
+    width: 100%;
 }
 
-/* Estilos de las secciones (Historia, Productos, Ubicación, Video) */
-.historia, .productos, .ubicacion, .video {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en múltiples líneas */
+.encabezado {
+    background: white;
+    padding: 0.5px;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    display: flex;
+    border-bottom: 3px solid black;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu_impacto,
+.menu_marcas,
+.menu_registro {
+    background: white;
+    padding: 0 100px 0 0;
+    font-size: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contenedor principal */
+.container {
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 50px 80px; /* Añadir espacio a los costados */
+}
+
+/* Sección historia, productos, ubicación y video */
+.historia, .productos, .ubicacion, .video {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre imagen y texto */
+    margin: 10px 300px;
     background: red;
+    border-color: black;
+    border-style: solid;
     border-radius: 10px;
     border-width: 5px;
-    border-color: black;
-    padding: 10px;
-    margin: 10px;
 }
 
 .historia img, .productos img, .ubicacion img, .video video {
-    width: 100%; /* Imágenes responsivas */
-    max-width: 300px; /* Tamaño máximo para las imágenes */
-    height: auto;
+    width: 300px; /* Ancho de la imagen */
+    height: auto; /* Mantener la proporción */
 }
 
-/* Texto ajustable */
 .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
-    max-width: 600px;
-    padding: 20px;
-    margin: 20px 10px;
-    text-align: justify;
-    flex-grow: 1; /* Permite que el texto se expanda en pantallas grandes */
-    opacity: 0;
-    transform: translateY(20px);
+    max-width: 600px; /* Ancho máximo del texto */
+    text-align: justify; /* Para alinear el texto */
+    padding: 0 0 0 20px;
+    margin: 20px 30px 20px 10px;
+}
+
+/* Animaciones para las imágenes */
+.historia img, .productos img, .ubicacion img, .video video {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.8; /* Hacer que la imagen sea ligeramente transparente por defecto */
+}
+
+.historia img:hover, .productos img:hover, .ubicacion img:hover, .video video:hover {
+    transform: translateY(-10px); /* Desliza hacia arriba */
+    opacity: 1; /* Opacidad completa cuando se pasa el mouse */
+}
+
+/* Animación para el texto (deslizamiento y fade-in) */
+.texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
+    opacity: 0; /* Texto oculto por defecto */
+    transform: translateY(20px); /* Texto desplazado hacia abajo por defecto */
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Animación activa al pasar el mouse */
+/* Aparece y sube al hacer hover sobre el contenedor */
 .historia:hover .texto-historia,
 .productos:hover .texto-productos,
 .ubicacion:hover .texto-ubicacion,
 .video:hover .texto-video {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Mostrar el texto */
+    transform: translateY(0); /* Mover el texto a su posición original */
 }
 
-/* Diseño responsivo para pantallas pequeñas */
+/* Footer */
+.shuter {
+    background-color: white; /* Fondo blanco del footer */
+    padding: 15px;
+    position: relative;
+}
+
+.shuter::before {
+    content: '';
+    display: block;
+    height: 5px; /* Ajusta el grosor de la raya */
+    background-color: black; /* Color de la raya */
+    width: 100%;
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: flex-start;
+    position: relative;
+    color: black;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.footer-logo img {
+    display: block;
+    margin-left: auto;
+}
+
+.box {
+    background: blue;
+    padding: 1px 100px;
+}
+
+/* Diseño responsivo */
 @media only screen and (max-width: 768px) {
-    .historia, .productos, .ubicacion, .video {
-        flex-direction: column; /* Disposición vertical para pantallas pequeñas */
+    .menu {
+        flex-direction: column;
         align-items: center;
     }
 
+    .menu_impacto,
+    .menu_marcas,
+    .menu_registro {
+        padding: 0 0 10px 0;
+        font-size: 25px;
+    }
+
+    .historia, .productos, .ubicacion, .video {
+        flex-direction: column;
+        margin: 10px;
+        gap: 20px;
+    }
+
     .historia img, .productos img, .ubicacion img, .video video {
-        width: 100%; /* Imágenes adaptadas al ancho de la pantalla */
-        max-width: none; /* Sin restricción de tamaño máximo */
+        width: 100%;
+        max-width: 100%;
     }
 
     .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
         padding: 10px;
         margin: 10px 0;
-        text-align: center; /* Alineación centrada para móviles */
+        text-align: center;
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Asegurarse de que las animaciones sigan funcionando en pantallas muy pequeñas */
 @media only screen and (max-width: 480px) {
-    .menu_impacto, .menu_marcas, .menu_registro {
-        font-size: 20px; /* Reducir tamaño de texto en pantallas muy pequeñas */
+    .menu {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .menu {
-        flex-direction: column; /* Menú apilado en móviles */
-        align-items: center;
+    .menu_impacto, .menu_marcas, .menu_registro {
+        font-size: 18px;
+        padding: 0 0 10px 0;
     }
 
     .footer-content {
-        flex-direction: column; /* Pie de página apilado */
+        flex-direction: column;
         align-items: center;
     }
 
-    .redes {
-        gap: 5px;
-    }
-
     .redes img {
-        width: 40px; /* Reducir tamaño de íconos sociales */
-    }
-
-    /* Mantener la animación activa incluso en pantallas pequeñas */
-    .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
-        opacity: 1;
-        transform: translateY(0);
+        width: 40px;
     }
 }
