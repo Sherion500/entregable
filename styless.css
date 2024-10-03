@@ -5,67 +5,6 @@ body {
     padding: 0;
 }
 
-/* Header */
-header {
-    background: white;
-    width: 100%;
-}
-
-.encabezado {
-    background: white;
-    padding: 0.5px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    border-bottom: 3px solid black;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-.menu_impacto a{
-    text-decoration: none;
-}
-
-.menu_registro a{
-    text-decoration: none;
-}
-
-.menu {
-    display: flex;
-}
-
-.menu_impacto, .menu_marcas, .menu_registro {
-    background: white;
-    padding: 0 100px 0 0;
-    font-size: 30px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: inherit;
-}
-
-@media only screen and (max-width: 768px) {
-    /* Cambios para pantallas pequeñas */
-    header .menu {
-        flex-direction: column; /* Cambia el menú a columna en pantallas pequeñas */
-    }
-
-    .menu_impacto, .menu_marcas, .menu_registro {
-        font-size: 20px; /* Reduce el tamaño del texto */
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    /* Ajustes para pantallas muy pequeñas */
-    .menu {
-        align-items: center; /* Centra el menú en pantallas muy pequeñas */
-    }
-}
-
 /* Contenedor principal */
 .container {
     margin: 0 auto;
