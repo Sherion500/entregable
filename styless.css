@@ -1,108 +1,44 @@
-header {
-    background: white;
-    width: 100%;
-}
-
-.encabezado {
-    background: white;
-    padding: 0.5px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    border-bottom: 3px solid black;
-}
-
-.menu {
-    display: flex;
-}
-
-.menu_impacto {
-    background: white;
-    padding: 0 100px 0 0;
-    font-size: 30px;
-}
-
-.menu_marcas {
-    background: white;
-    padding: 0 100px 0 0;
-    font-size: 30px;
-}
-
-.menu_marcas a {
-    text-decoration: none;
-}
-
-.menu_registro {
-    background: white;
-    padding: 0 100px 0 0;
-    font-size: 30px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.menu_impacto a {
-    text-decoration: none;
-}
-
-.menu_registro a {
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
+/* Estilos generales */
 body {
     background: white;
     margin: 0;
     padding: 0;
 }
 
+/* Contenedor principal */
 .container {
     margin: 0 auto;
-    padding: 50px 80px;
+    padding: 50px 10px; /* Espacio adaptado para móviles */
 }
 
+/* Estilos de las secciones (Historia, Productos, Ubicación, Video) */
 .historia, .productos, .ubicacion, .video {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en múltiples líneas */
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    margin: 10px 300px;
     background: red;
-    border-color: black;
-    border-style: solid;
     border-radius: 10px;
     border-width: 5px;
+    border-color: black;
+    padding: 10px;
+    margin: 10px;
 }
 
 .historia img, .productos img, .ubicacion img, .video video {
-    width: 300px;
+    width: 100%; /* Imágenes responsivas */
+    max-width: 300px; /* Tamaño máximo para las imágenes */
     height: auto;
 }
 
+/* Texto ajustable */
 .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
     max-width: 600px;
+    padding: 20px;
+    margin: 20px 10px;
     text-align: justify;
-    padding: 0 0 0 20px;
-    margin: 20px 30px 20px 10px;
-}
-
-.historia img, .productos img, .ubicacion img, .video video {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0.8;
-}
-
-.historia img:hover, .productos img:hover, .ubicacion img:hover, .video video:hover {
-    transform: translateY(-10px);
-    opacity: 1;
-}
-
-.texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
+    flex-grow: 1; /* Permite que el texto se expanda en pantallas grandes */
     opacity: 0;
     transform: translateY(20px);
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -116,117 +52,47 @@ body {
     transform: translateY(0);
 }
 
-.shuter {
-    background-color: white;
-    padding: 15px;
-    position: relative;
-}
-
-.shuter::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: black;
-    width: 100%;
-    position: absolute;
-    top: -5px;
-    left: 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: flex-start;
-    gap: 50px;
-    align-items: flex-start;
-    position: relative;
-    color: black;
-}
-
-.footer-content div {
-    width: auto;
-}
-
-.redes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.redes img {
-    width: 50px;
-    height: auto;
-}
-
-.footer-logo {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.footer-logo img {
-    display: block;
-    margin-left: auto;
-}
-
-.box {
-    background: blue;
-    padding: 1px 100px;
-}
-
-/* Media Queries Responsivas */
-@media screen and (max-width: 320px) {
-    .menu_impacto, .menu_marcas, .menu_registro {
-        padding: 0 20px;
-        font-size: 18px;
-    }
-    .historia img, .productos img, .ubicacion img, .video video {
-        width: 100%;
-    }
-    .footer-content {
-        flex-direction: column;
+/* Diseño responsivo para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .historia, .productos, .ubicacion, .video {
+        flex-direction: column; /* Disposición vertical para pantallas pequeñas */
         align-items: center;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .menu_impacto, .menu_marcas, .menu_registro {
-        padding: 0 30px;
-        font-size: 22px;
-    }
-    .historia, .productos, .ubicacion, .video {
-        flex-direction: column;
-        margin: 10px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .menu_impacto, .menu_marcas, .menu_registro {
-        font-size: 26px;
-    }
-    .container {
-        padding: 30px;
-    }
     .historia img, .productos img, .ubicacion img, .video video {
-        width: 80%;
+        width: 100%; /* Imágenes adaptadas al ancho de la pantalla */
+        max-width: none; /* Sin restricción de tamaño máximo */
+    }
+
+    .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
+        padding: 10px;
+        margin: 10px 0;
+        text-align: center; /* Alineación centrada para móviles */
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 480px) {
     .menu_impacto, .menu_marcas, .menu_registro {
-        font-size: 28px;
+        font-size: 20px; /* Reducir tamaño de texto en pantallas muy pequeñas */
     }
-    .historia, .productos, .ubicacion, .video {
-        gap: 20px;
-        margin: 20px auto;
-    }
-}
 
-@media screen and (min-width: 1025px) {
-    .container {
-        padding: 50px 80px;
+    .menu {
+        flex-direction: column; /* Menú apilado en móviles */
+        align-items: center;
     }
-    .historia img, .productos img, .ubicacion img, .video video {
-        width: 300px;
+
+    .footer-content {
+        flex-direction: column; /* Pie de página apilado */
+        align-items: center;
+    }
+
+    .redes {
+        gap: 5px;
+    }
+
+    .redes img {
+        width: 40px; /* Reducir tamaño de íconos sociales */
     }
 }
