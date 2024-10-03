@@ -44,6 +44,7 @@ body {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+/* Animación activa al pasar el mouse */
 .historia:hover .texto-historia,
 .productos:hover .texto-productos,
 .ubicacion:hover .texto-ubicacion,
@@ -73,6 +74,7 @@ body {
     }
 }
 
+/* Asegurarse de que las animaciones sigan funcionando en pantallas muy pequeñas */
 @media only screen and (max-width: 480px) {
     .menu_impacto, .menu_marcas, .menu_registro {
         font-size: 20px; /* Reducir tamaño de texto en pantallas muy pequeñas */
@@ -94,5 +96,11 @@ body {
 
     .redes img {
         width: 40px; /* Reducir tamaño de íconos sociales */
+    }
+
+    /* Mantener la animación activa incluso en pantallas pequeñas */
+    .texto-historia, .texto-productos, .texto-ubicacion, .texto-video {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
