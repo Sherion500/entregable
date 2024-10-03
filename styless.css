@@ -152,7 +152,7 @@ header {
     padding: 1px 100px;
 }
 
-/* Diseño responsivo */
+/* Diseño responsivo (sin alterar header y footer) */
 @media only screen and (max-width: 768px) {
     .menu {
         flex-direction: column;
