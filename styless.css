@@ -186,5 +186,5 @@ body{
 /* Pantallas pequeñas, por ejemplo, móviles (hasta 600px) */
 @media screen and (max-width: 600px) {
     header, body, footer {
-        padding: 15px;
+        padding: 25px;
     }
