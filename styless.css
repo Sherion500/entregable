@@ -25,6 +25,14 @@ a{
     color: black;
 }
 
+.menu_impacto a{
+    text-decoration: none;
+}
+
+.menu_registro a{
+    text-decoration: none;
+}
+
 .menu {
     display: flex;
 }
